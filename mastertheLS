@@ -1,0 +1,1 @@
+ls -mAFrt | sed 's / // g'
