@@ -1,9 +1,11 @@
 package piscine
 
 func StrRev(s string) string {
-	slice := []rune(s)
-	for i, j := 0, len(slice)-1; i < j; i, j = i+1, j-1 {
-		slice[i], slice[j] = slice[j], slice[i]
+
+	var word string
+
+	for i := len(s) - 1; i >= 0; i-- {
+		word += string(s[i])
 	}
-	return string(slice)
+	return word
 }
