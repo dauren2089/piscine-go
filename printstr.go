@@ -8,4 +8,5 @@ func PrintStr(str string) {
 	for _, word := range slice {
 		z01.PrintRune(word)
 	}
+	z01.PrintRune(10)
 }
