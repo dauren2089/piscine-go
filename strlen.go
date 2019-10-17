@@ -1,12 +1,11 @@
 package piscine
 
 func StrLen(str string) int {
-
-	len1 := []rune(str)
+	slice := []rune(str)
 
 	count := 0
 
-	for index, _ := range len1 {
+	for index, _ := range slice {
 		count = index + 1
 	}
 
