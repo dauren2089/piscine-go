@@ -2,9 +2,9 @@ package piscine
 
 func Swap(a *int, b *int) {
 
-	A := new(int)
+	var c = *a
 
-	*A = *a
 	*a = *b
-	*b = *A
+	*b = c
+
 }
