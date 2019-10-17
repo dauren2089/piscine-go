@@ -2,8 +2,13 @@ package piscine
 
 func StrLen(str string) int {
 
-	//n := strings.Count(str, "")
-	n := len(str)
+	len := []rune(str)
 
-	return n
+	count := 0
+
+	for index, _ := range len {
+		count = index + 1
+	}
+
+	return count
 }
