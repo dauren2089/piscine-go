@@ -4,10 +4,8 @@ func StrRev(s string) string {
 
 	word := []rune(s)
 
-	var reverse string
-
-	for i := len(s) - 1; i >= 0; i-- {
-		reverse += string(word[i])
+	for i, j := 0, len(word)-1; i < j; i, j = i+1, j-1 {
+		word[i], word[j] = word[j], word[i]
 	}
-	return reverse
+	return string(word)
 }
