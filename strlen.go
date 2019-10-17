@@ -1,10 +1,9 @@
 package piscine
 
-import "strings"
-
 func StrLen(str string) int {
 
-	n := strings.Count(str, "")
+	//n := strings.Count(str, "")
+	n := len(str)
 
-	return n - 1
+	return n
 }
