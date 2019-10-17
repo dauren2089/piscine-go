@@ -5,7 +5,7 @@ func StrLen(str string) int {
 
 	count := 0
 
-	for index, _ := range slice {
+	for index := range slice {
 		count = index + 1
 	}
 
