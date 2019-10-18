@@ -2,17 +2,15 @@ package piscine
 
 func StrRev(s string) string {
 
-	n := 0
-	rune := make([]rune, len(s))
-	for _, r := range s {
-		rune[n] = r
-		n++
-	}
-	rune = rune[0:n]
-	// Reverse
-	for i := 0; i < n/2; i++ {
-		rune[i], rune[n-1-i] = rune[n-1-i], rune[i]
-	}
+	slice := []rune(s)
 
-	return string(rune)
+	count := 0
+
+	for index := range slice {
+		count = index + 1
+	}
+	for i, j := 0, count-1; i < j; i, j = i+1, j-1 {
+		slice[i], slice[j] = slice[j], slice[i]
+	}
+	return string(slice)
 }
