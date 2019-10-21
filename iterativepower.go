@@ -16,9 +16,13 @@ func IterativePower(nb int, power int) int {
 
 		return result
 
-	} else if nb == 0 || power == 0 {
+	} else if power == 0 {
 
 		return 1
+
+	} else if nb == 0 {
+
+		return 0
 	}
 
 	return 0
