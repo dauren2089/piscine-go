@@ -10,6 +10,8 @@ func FindNextPrime(nb int) int {
 
 		return 3
 
+	}
+
 	for j := 2; j <= nb; j++ {
 
 		if nb%j == 0 {
