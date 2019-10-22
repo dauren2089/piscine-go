@@ -5,7 +5,7 @@ package piscine
 func AlphaCount(str string) int {
 	count := 0
 
-	for i:= 'a'; i <= 'z'; i++ {
+	for i := 'a'; i <= 'z'; i++ {
 		for _, value := range str {
 			if value == i {
 				count++
@@ -13,7 +13,7 @@ func AlphaCount(str string) int {
 		}
 	}
 
-	for j:= 'A'; j <= 'Z'; j++ {
+	for j := 'A'; j <= 'Z'; j++ {
 
 		for _, value := range str {
 			if value == j {
