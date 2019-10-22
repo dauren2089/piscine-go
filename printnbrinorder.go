@@ -1,4 +1,5 @@
 package piscine
+
 import (
 	"github.com/01-edu/z01"
 	"strconv"
@@ -7,7 +8,7 @@ import (
 func PrintNbrInOrder(n int) {
 	sentence := strconv.Itoa(n)
 
-	for i :=48; i<=57; i++ {
+	for i :=48; i <= 57; i++ {
 		//z01.PrintRune(rune(i))
 		for _, value := range sentence {
 			if value == rune(i) {
