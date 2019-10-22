@@ -2,9 +2,9 @@ package piscine
 
 func NRune(s string, n int) rune {
 
-	firstrune := []rune(s)
+	nrune := []rune(s)
 
-	return firstrune[n-1]
+	return nrune[n-1]
 
 }
 
