@@ -18,7 +18,7 @@ func PrintNbrInOrder(n int) {
 func sortnbr(sentence []int) []int {
 	for value := true; value; {
 		value = false
-		for i := 1; i < len(sentence); i++ {
+		for i := 1; i < strlen(sentence); i++ {
 			if sentence[i] < sentence[i-1] {
 				sentence[i], sentence[i-1] = sentence[i-1], sentence[i]
 				value = true
@@ -39,4 +39,15 @@ func converttoint(n int) []int {
 		n /= 10
 	}
 	return nbr
+}
+
+func strlen(str []int) int {
+
+	count := 0
+
+	for value := range str {
+		count = value + 1
+	}
+
+	return count
 }
