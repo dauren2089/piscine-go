@@ -1,28 +1,31 @@
 package piscine
 
 func ToUpper(s string) string {
-	sentence := []rune(s)
-	for index, i := range sentence {
-		if i > 96 && i < 123 {
-			sentence[index] = i - 32
+
+	var result string
+
+	slice := []rune(s)
+
+	for i := 0; i <= strLen(s)-1; i++ {
+
+		if (slice[i] >= 'a') && (slice[i] <= 'z') {
+
+			slice[i] = slice[i] - 32
+
 		}
+		result += string(slice[i])
+
 	}
-	return string(sentence)
+	return result
 }
 
+func strLen(str string) int {
 
-//func ToUpper(s string) string {
-//	h := []rune(s)
-//	result := ""
-//	for i := 0; i <= lent(h)-1; i++ {
-//
-//		if (h[i] >= 'a') && (h[i] <= 'z') {
-//
-//			h[i] = h[i] - 32
-//
-//		}
-//		result += string(h[i])
-//
-//	}
-//	return result
-//}
+	count := 0
+
+	for index := range str {
+		count = index + 1
+	}
+
+	return count
+}
