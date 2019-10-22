@@ -4,7 +4,7 @@ import (
 	"github.com/01-edu/z01"
 )
 
-func PrintNbrInOrder(n int64) //int64 {
+func PrintNbrInOrder(n int64) {
 	if n < 0 {
 			return
 	}
@@ -24,18 +24,15 @@ func PrintNbrInOrder(n int64) //int64 {
 
 		for j := '0'; j <= '9'; j++ {
 
-			if rune(answer[i] + 48) == j {
+			if rune(answer[i]+48) == j {
 
 				z01.PrintRune(j)
 
 			}
 
-
 		}
-
 	}
-
-	}
+}
 
 func IntToSlice(n int64, sequence []int64) []int64 {
 	if n != 0 {
