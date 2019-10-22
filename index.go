@@ -2,8 +2,8 @@ package piscine
 
 func Index(s string, toFind string) int {
 
-	sentence := StrLen(s)
-	letter := StrLen(toFind)
+	sentence := strLen(s)
+	letter := strLen(toFind)
 
 	if toFind == "" {
 		return 0
@@ -20,7 +20,7 @@ func Index(s string, toFind string) int {
 
 }
 
-func StrLen(str string) int {
+func strLen(str string) int {
 
 	count := 0
 
