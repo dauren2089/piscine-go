@@ -1,27 +1,31 @@
 package piscine
 
 func ToLower(s string) string {
-	sentence := []rune(s)
-	for index, value := range sentence {
-		if value > 64 && value < 91 {
-			sentence[index] = value + 32
+
+	var result string
+
+	slice := []rune(s)
+
+	for i := 0; i <= strLen(s)-1; i++ {
+
+		if (slice[i] >= 'A') && (slice[i] <= 'Z') {
+
+			slice[i] = slice[i] + 32
+
 		}
+		result += string(slice[i])
+
 	}
-	return string(sentence)
+	return result
 }
 
-//func ToLower(s string) string {
-//	h := []rune(s)
-//	result := ""
-//	for i := 0; i <= lent(h)-1; i++ {
-//
-//		if (h[i] >= 'A') && (h[i] <= 'Z') {
-//
-//			h[i] = h[i] + 32
-//
-//		}
-//		result += string(h[i])
-//
-//	}
-//	return result
-//}
+// func strLen(str string) int {
+
+// 	count := 0
+
+// 	for index := range str {
+// 		count = index + 1
+// 	}
+
+// 	return count
+// }
