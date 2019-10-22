@@ -7,12 +7,15 @@ func PrintNbrInOrder(n int) {
 		z01.PrintRune('0')
 		return
 	}
-	for _, value := range sortNbr(convertToInt(n)) {
+	if n < 0 {
+		return
+	}
+	for _, value := range sortnbr(converttoint(n)) {
 		z01.PrintRune(rune(value) + '0')
 	}
 }
 
-func sortNbr(sentence []int) []int {
+func sortnbr(sentence []int) []int {
 	for value := true; value; {
 		value = false
 		for i := 1; i < len(sentence); i++ {
@@ -25,7 +28,8 @@ func sortNbr(sentence []int) []int {
 	return sentence
 }
 
-func convertToInt(n int) (nbr []int) {
+func converttoint(n int) []int {
+	var nbr []int
 	for n > 0 {
 		if n == 0 {
 			nbr = append(nbr, 0)
@@ -34,5 +38,5 @@ func convertToInt(n int) (nbr []int) {
 		}
 		n /= 10
 	}
-	return
+	return nbr
 }
