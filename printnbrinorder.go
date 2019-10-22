@@ -6,7 +6,7 @@ import (
 
 func PrintNbrInOrder(n int64) {
 	if n < 0 {
-			return
+		return
 	}
 	if n == 0 {
 
@@ -14,17 +14,17 @@ func PrintNbrInOrder(n int64) {
 
 	}
 
-	var answer []int64
+	var sentense []int64
 
-	answer = IntToSlice(n, answer)
+	sentense = IntToSlice(n, sentense)
 
-	SortInteger(answer)
+	SortInteger(sentense)
 
-	for i := range answer {
+	for i := range sentense {
 
 		for j := '0'; j <= '9'; j++ {
 
-			if rune(answer[i]+48) == j {
+			if rune(sentense[i]+48) == j {
 
 				z01.PrintRune(j)
 
@@ -34,24 +34,24 @@ func PrintNbrInOrder(n int64) {
 	}
 }
 
-func IntToSlice(n int64, sequence []int64) []int64 {
+func IntToSlice(n int64, sentense []int64) []int64 {
 	if n != 0 {
 		i := n % 10
 		// sequence = append(sequence, i) // reverse order output
-		sequence = append([]int64{i}, sequence...)
-		return IntToSlice(n/10, sequence)
+		sentense = append([]int64{i}, sentense...)
+		return IntToSlice(n/10, sentense)
 	}
-	return sequence
+	return sentense
 }
 
-func SortInteger(table []int64) {
-	L := len(table)
+func SortInteger(str []int64) {
+	L := len(str)
 
 	for i := 0; i < L; i++ {
 
 		for j := 0; j < (L - 1 - i); j++ {
-			if table[j] > table[j+1] {
-				table[j], table[j+1] = table[j+1], table[j]
+			if str[j] > str[j+1] {
+				str[j], str[j+1] = str[j+1], str[j]
 			}
 		}
 	}
