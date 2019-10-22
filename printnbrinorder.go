@@ -2,37 +2,37 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func sortInt(arr []int) []int {
-	for run := true; run; {
-		run = false
-		for i := 1; i < len(arr); i++ {
-			if arr[i] < arr[i-1] {
-				arr[i], arr[i-1] = arr[i-1], arr[i]
-				run = true
-			}
-		}
-	}
-	return arr
-}
-
-func intToDigits(n int) (digits []int) {
-	for n > 0 {
-		if n == 0 {
-			digits = append(digits, 0)
-		} else {
-			digits = append(digits, n%10)
-		}
-		n /= 10
-	}
-	return
-}
-
 func PrintNbrInOrder(n int) {
 	if n == 0 {
 		z01.PrintRune('0')
 		return
 	}
-	for _, c := range sortInt(intToDigits(n)) {
-		z01.PrintRune(rune(c) + '0')
+	for _, value := range sortNbr(convertToInt(n)) {
+		z01.PrintRune(rune(value) + '0')
 	}
+}
+
+func sortNbr(sentence []int) []int {
+	for value := true; value; {
+		value = false
+		for i := 1; i < len(sentence); i++ {
+			if sentence[i] < sentence[i-1] {
+				sentence[i], sentence[i-1] = sentence[i-1], sentence[i]
+				value = true
+			}
+		}
+	}
+	return sentence
+}
+
+func convertToInt(n int) (nbr []int) {
+	for n > 0 {
+		if n == 0 {
+			nbr = append(nbr, 0)
+		} else {
+			nbr = append(nbr, n%10)
+		}
+		n /= 10
+	}
+	return
 }
