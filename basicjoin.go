@@ -1,12 +1,12 @@
-package piscine
+// package piscine
 
-func BasicJoin(strs []string) string {
-	word := ""
-	for value := range strs {
-		word += strs[value]
-	}
-	return word
-}
+// func BasicJoin(strs []string) string {
+// 	word := ""
+// 	for value := range strs {
+// 		word += strs[value]
+// 	}
+// 	return word
+// }
 
 //func BasicJoin(strs []string) string {
 //	var ret string
