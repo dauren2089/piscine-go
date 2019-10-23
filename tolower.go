@@ -18,14 +18,3 @@ func ToLower(s string) string {
 	}
 	return result
 }
-
-// func strLen(str string) int {
-
-// 	count := 0
-
-// 	for index := range str {
-// 		count = index + 1
-// 	}
-
-// 	return count
-// }
