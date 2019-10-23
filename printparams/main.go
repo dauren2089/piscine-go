@@ -13,6 +13,7 @@ func main() {
 	for i := 1; i < strLenght(arguments); i++ {
 
 		printRune(arguments[i])
+
 		z01.PrintRune(10)
 	}
 
