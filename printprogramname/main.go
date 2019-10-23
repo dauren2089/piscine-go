@@ -10,12 +10,12 @@ func main() {
 
 	arguments := os.Args
 
-	printRune(arguments[0])
+	printArgs(arguments[0])
 
 	z01.PrintRune('\n')
 }
 
-func printRune(str string) {
+func printArgs(str string) {
 
 	runes := []rune(str)
 
