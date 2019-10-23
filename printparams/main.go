@@ -10,8 +10,10 @@ func main() {
 
 	arguments := os.Args
 
-	for i := 1; i <= len(arguments)-1; i++ {
+	for i := 1; i < strLenght(arguments); i++ {
+
 		printRune(arguments[i])
+		z01.PrintRune(10)
 	}
 
 }
@@ -25,6 +27,15 @@ func printRune(str string) {
 		z01.PrintRune(value)
 
 	}
+}
 
-	z01.PrintRune('\n')
+func strLenght(str []string) int {
+
+	count := 0
+
+	for index := range str {
+		count = index + 1
+	}
+
+	return count
 }
