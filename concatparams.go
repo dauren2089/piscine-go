@@ -29,7 +29,7 @@ func stringLen(str []string) int {
 
 	count := 0
 
-	for _, _ = range str {
+	for range str {
 
 		count++
 	}
