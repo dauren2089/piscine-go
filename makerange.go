@@ -17,15 +17,11 @@ func MakeRange(min, max int) []int {
 
 	rangeNbr := make([]int, size)
 
-	//fmt.Println("RangeNumber before: ", rangeNbr)
-
 	if min < max {
 
 		i := 0
 
 		for j := min; j < max; j++ {
-
-			fmt.Println(i)
 
 			rangeNbr[i] = j
 
@@ -33,7 +29,6 @@ func MakeRange(min, max int) []int {
 
 		}
 
-		//fmt.Println("RangeNumber after: ", rangeNbr)
 	}
 
 	return rangeNbr
