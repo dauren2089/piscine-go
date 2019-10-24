@@ -25,11 +25,11 @@ func ConcatParams(args []string) string {
 	return concatstr
 }
 
-func stringLen(str []string) int {
+func stringLen(word []string) int {
 
 	count := 0
 
-	for range str {
+	for range word {
 
 		count++
 	}
