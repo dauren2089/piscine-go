@@ -5,15 +5,10 @@ func MakeRange(min, max int) []int {
 	var size int
 
 	if min < max {
+
 		size = max - min
 
-	} else {
-		size = 0
-	}
-
-	rangeNbr := make([]int, size)
-
-	if min < max {
+		rangeNbr := make([]int, size)
 
 		i := 0
 
@@ -25,7 +20,11 @@ func MakeRange(min, max int) []int {
 
 		}
 
+		return rangeNbr
+
 	}
+
+	var rangeNbr []int = nil
 
 	return rangeNbr
 }
